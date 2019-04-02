@@ -164,9 +164,9 @@ app.setUserChoiceScissors = function () {
 
 app.init = function () {
   $('.set').on('click', app.setFirstTo);
-  $('.rock').on('click', app.setUserChoiceRock);
-  $('.paper').on('click', app.setUserChoicePaper);
-  $('.scissors').on('click', app.setUserChoiceScissors);
+  $('#rock').on('click', app.setUserChoiceRock);
+  $('#paper').on('click', app.setUserChoicePaper);
+  $('#scissors').on('click', app.setUserChoiceScissors);
   $(".close, .mask").on("click", function () {
     app.closeModal();
   });
