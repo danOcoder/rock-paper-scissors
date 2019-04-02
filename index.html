@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="public/styles/styles.css" />
+  </head>
+
+  <body>
+    <div class="drake">
+      <h1>rock, paper, scissors</h1>
+      <form>
+        <label for="best_of">first to win:</label>
+        <input type="text" class="first_to" placeholder="3" />
+        <input type="submit" value="set" class="set" />
+      </form>
+      <div class="flex_parent_third">
+        <div class="img_container rock">
+          <img src="./public/assets/rock.png" alt="" />
+        </div>
+        <div class="img_container paper">
+          <img src="./public/assets/paper.png" alt="" />
+        </div>
+        <div class="img_container scissors">
+          <img src="./public/assets/scissors.png" alt="" />
+        </div>
+      </div>
+      <h2>games played: <span id="games_played">0</span></h2>
+      <h2>user score: <span id="user_score">0</span></h2>
+      <h2>computer score: <span id="comp_score">0</span></h2>
+      <h2>draws: <span id="draws">0</span></h2>
+      <h1><span id="outcome"></span></h1>
+    </div>
+    <div class="mask" role="dialog"></div>
+    <div class="modal" role="alert">
+      <button class="close" role="button">X</button>
+      <div id="modal_text" class="modal_text"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="public/scripts/main.js"></script>
+  </body>
+</html>
