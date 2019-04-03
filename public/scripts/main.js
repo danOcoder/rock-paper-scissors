@@ -1,6 +1,5 @@
 "use strict";
 
-var firstTo = '';
 var userChoice = '';
 var compChoice = '';
 var compChoiceArray = ['rock', 'paper', 'scissors'];
@@ -16,70 +15,26 @@ app.genRandomNumber = function () {
   return randomNumber;
 };
 
-app.setFirstTo = function (event) {
-  event.preventDefault();
-  firstTo = parseInt($('.first_to').val());
-
-  if (isNaN(firstTo) || firstTo <= 0 || firstTo % 1 !== 0) {
-    alert('Try agin');
-  } else {
-    $('.set').hide('.set');
-    $('input').attr('disabled', 'disabled');
-    return firstTo;
-  }
-};
-
 app.trackGamesPlayed = function () {
   gamesPlayed++;
   $('#games_played').html(gamesPlayed.toString());
 };
 
-app.evaluateScore = function () {
-  if (userScore === firstTo) {
-    $(".mask").addClass("active");
-    $('.modal_text').html("<h2>Computy goes ".concat(compChoice, " you win! You're first to win ").concat(firstTo, ", congratulations!</h2>\n     <span class=\"icon\"><i class=\"fas fa-trophy\"></i></span>"));
-  } else if (compScore === firstTo) {
-    $(".mask").addClass("active");
-    $('.modal_text').html("<h2>Computy goes ".concat(compChoice, " you lose! Computy is first to win ").concat(firstTo, ", sorry about that.</h2>\n      <span class=\"icon\"><i class=\"fas fa-frown\"></i></span>"));
-  }
-};
-
 app.setCompChoice = function () {
   app.genRandomNumber();
   compChoice = compChoiceArray[randomNumber];
-  console.log(compChoice);
   return compChoice;
 };
 
-app.resetGame = function () {
-  firstTo = 0;
-  userChoice = '';
-  compChoice = '';
-  userScore = 0;
-  compScore = 0;
-  draws = 0;
-  gamesPlayed = 0;
-  $('#comp_choice').html('');
-  $('#comp_score').html('0');
-  $('#user_score').html('0');
-  $('#draws').html('0');
-  $('#games_played').html('0');
-  $('#outcome').html('');
-  $('.first_to').val('');
-  $('.set').show('.set');
-  $('input').removeAttr('disabled');
+app.closeModal = function () {
+  $('.modal').removeClass('visible').addClass('hidden');
 };
 
-app.closeModal = function () {
-  $(".mask").removeClass("active");
-  app.resetGame();
+app.openModal = function () {
+  $('.modal').removeClass('hidden').addClass('visible');
 };
 
 app.setUserChoiceRock = function () {
-  if (firstTo === '') {
-    return undefined;
-  }
-
   app.setCompChoice();
   userChoice = 'rock';
 
@@ -101,14 +56,10 @@ app.setUserChoiceRock = function () {
   }
 
   app.trackGamesPlayed();
-  app.evaluateScore();
+  app.openModal();
 };
 
 app.setUserChoicePaper = function () {
-  if (firstTo === '') {
-    return undefined;
-  }
-
   app.setCompChoice();
   userChoice = 'paper';
 
@@ -130,14 +81,9 @@ app.setUserChoicePaper = function () {
   }
 
   app.trackGamesPlayed();
-  app.evaluateScore();
 };
 
 app.setUserChoiceScissors = function () {
-  if (firstTo === '') {
-    return undefined;
-  }
-
   app.setCompChoice();
   userChoice = 'scissors';
 
@@ -159,17 +105,13 @@ app.setUserChoiceScissors = function () {
   }
 
   app.trackGamesPlayed();
-  app.evaluateScore();
 };
 
 app.init = function () {
-  $('.set').on('click', app.setFirstTo);
   $('#rock').on('click', app.setUserChoiceRock);
   $('#paper').on('click', app.setUserChoicePaper);
   $('#scissors').on('click', app.setUserChoiceScissors);
-  $(".close, .mask").on("click", function () {
-    app.closeModal();
-  });
+  $('.play_again').on('click', app.closeModal);
 };
 
 $(document).ready(function () {

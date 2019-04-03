@@ -20,11 +20,6 @@
   <body>
     <div class="drake">
       <h1>rock, paper, scissors</h1>
-      <form>
-        <label for="best_of">1st to:</label>
-        <input type="text" class="first_to" placeholder="3" />
-        <input type="submit" value="set" class="set" />
-      </form>
       <h2>Make your move:</h2>
       <div class="img_wrap">
         <a href="#0" class="img_container" id="rock">
@@ -37,16 +32,21 @@
           <img src="./public/assets/scissors.png" alt="" />
         </a>
       </div>
-      <!-- <h2>games played: <span id="games_played">0</span></h2>
-      <h2>user score: <span id="user_score">0</span></h2>
-      <h2>computer score: <span id="comp_score">0</span></h2>
-      <h2>draws: <span id="draws">0</span></h2>
-      <h1><span id="outcome"></span></h1> -->
     </div>
-    <div class="mask" role="dialog"></div>
-    <div class="modal" role="alert">
-      <button class="close" role="button">X</button>
-      <div id="modal_text" class="modal_text"></div>
+    <div class="modal hidden">
+      <div class="drake">
+        <div href="#0" class="img_container">
+          <img src="./public/assets/rock.png" alt="" />
+        </div>
+        <h1><span id="outcome"></span></h1>
+        <div class="score">
+          <h2>Games played: <span id="games_played">0</span></h2>
+          <h2>Games won: <span id="user_score">0</span></h2>
+          <h2>Games lost: <span id="comp_score">0</span></h2>
+          <h2>Games drawn: <span id="draws">0</span></h2>
+        </div>
+        <button class="play_again" role="button">Play again</button>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="public/scripts/main.js"></script>

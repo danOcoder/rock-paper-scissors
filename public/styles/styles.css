@@ -186,7 +186,7 @@ body {
 h1 {
   font-family: 'Major Mono Display', monospace;
   font-size: 5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 40px; }
 
 h2 {
@@ -195,12 +195,14 @@ h2 {
 
 h2,
 label,
-input {
+input,
+button {
   font-size: 3rem;
   font-family: 'Roboto Mono', monospace; }
 
 label,
-input {
+input,
+button {
   font-weight: 600; }
 
 .drake {
@@ -222,6 +224,7 @@ input {
   margin-top: 40px; }
 
 .img_container {
+  margin: 0 auto;
   overflow: hidden;
   width: 40%;
   cursor: pointer; }
@@ -256,13 +259,16 @@ input.first_to:disabled {
   background-color: white;
   color: #192231; }
 
+.play_again,
+input.set {
+  border: none;
+  padding: 2px;
+  border-radius: 3px; }
+
 input.set {
   background-color: #985e6d;
   color: #192231;
-  border: none;
-  padding: 2px;
-  margin-left: 5px;
-  border-radius: 3px; }
+  margin-left: 5px; }
 
 @media (min-width: 320px) {
   .icon {
@@ -285,60 +291,34 @@ input.set {
     width: calc((100% / 3)); } }
 
 /**** 0px until overridden ****/
-.close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35px;
-  height: 30px;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  border: 0;
-  font-family: sans-serif; }
-
-.mask {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
-  z-index: 50;
-  visibility: hidden;
-  -webkit-transition: 0.7s;
-  transition: 0.7s; }
+  background: white; }
+  .modal h2 {
+    border: none; }
+  .modal .img_container {
+    width: 45%; }
 
-.modal {
-  position: fixed;
-  top: 45%;
-  left: 45%;
-  width: 40%;
-  height: 400px;
-  margin-left: -15%;
-  margin-top: -150px;
-  background: white;
-  border: 1px solid black;
-  border-radius: 4px;
-  z-index: 100;
-  visibility: hidden;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
-  -webkit-transform: translateY(45px);
-          transform: translateY(45px); }
+.hidden {
+  visibility: hidden; }
 
-.active {
-  visibility: visible;
-  opacity: 1; }
+.visible {
+  visibility: visible; }
 
-.active + .modal {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0); }
+.score {
+  margin-bottom: 40px;
+  border-top: 2px solid #985e6d;
+  border-bottom: 2px solid #985e6d;
+  padding: 10px 0; }
 
-.modal_text {
-  padding: 10px; }
+.play_again {
+  background-color: #192231;
+  color: #985e6d;
+  padding: 5px 10px; }
 
 /**** screen meets or exceeds 320 px****/
 /**** screen meets or exceeds 480px****/
