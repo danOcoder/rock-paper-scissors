@@ -223,7 +223,7 @@ input {
 
 .img_container {
   overflow: hidden;
-  width: 50%;
+  width: 40%;
   cursor: pointer; }
   .img_container img {
     max-width: 100%;
