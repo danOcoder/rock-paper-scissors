@@ -2,17 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>New Project</title>
+    <title>Rock Paper Scissors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="public/styles/styles.css" />
   </head>
@@ -23,21 +17,28 @@
       <h2>Make your move:</h2>
       <div class="img_wrap">
         <a href="#0" class="img_container" id="rock">
-          <img src="./public/assets/rock.png" alt="" />
+          <img
+            src="./public/assets/rock.png"
+            alt="cartoon hand indicating rock"
+          />
         </a>
         <a href="#0" class="img_container" id="paper">
-          <img src="./public/assets/paper.png" alt="" />
+          <img
+            src="./public/assets/paper.png"
+            alt="cartoon hand indicating paper"
+          />
         </a>
         <a href="#0" class="img_container" id="scissors">
-          <img src="./public/assets/scissors.png" alt="" />
+          <img
+            src="./public/assets/scissors.png"
+            alt="cartoon hand indicating scissors"
+          />
         </a>
       </div>
     </div>
     <div class="modal hidden">
       <div class="drake">
-        <div href="#0" class="img_container">
-          <img src="./public/assets/rock.png" alt="" />
-        </div>
+        <div class="img_container" id="comp_choice"></div>
         <h1><span id="outcome"></span></h1>
         <div class="score">
           <h2>Games played: <span id="games_played">0</span></h2>
