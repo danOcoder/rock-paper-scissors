@@ -222,7 +222,7 @@ button {
 .img_container {
   margin: 0 auto;
   overflow: hidden;
-  width: 40%;
+  width: 35%;
   cursor: pointer; }
   .img_container img {
     max-width: 100%;
@@ -236,10 +236,6 @@ button {
   border: none;
   padding: 2px;
   border-radius: 3px; }
-
-@media (min-width: 480px) {
-  .img_container {
-    width: 35%; } }
 
 @media (min-width: 600px) {
   .img_wrap {
