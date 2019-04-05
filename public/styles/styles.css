@@ -269,7 +269,9 @@ button {
 
 @media (min-width: 1400px) {
   h2 {
-    width: 50%; } }
+    width: 50%; }
+  .img_container {
+    width: 25%; } }
 
 /**** 0px until overridden ****/
 .modal {
@@ -320,7 +322,7 @@ button {
 
 @media (min-width: 1400px) {
   .modal .img_container {
-    width: 25%; }
+    width: 20%; }
   .modal .drake {
     margin-top: 60px; }
   .score {
