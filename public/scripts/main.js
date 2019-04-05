@@ -33,20 +33,20 @@ app.setUserChoice = function (compChoice, userChoice) {
     console.log('userScore: ', app.userScore);
     console.log('compScore: ', app.compScore);
     $('#comp_score').html(app.compScore.toString());
-    $('#outcome').html("".concat(compChoice, " you lose!"));
+    $('#outcome').html("You lose!");
   } else if (userChoice === 'rock' && compChoice === 'scissors' || userChoice === 'paper' && compChoice === 'rock' || userChoice === 'scissors' && compChoice === 'paper') {
     console.log('user wins');
     app.userScore++;
     console.log('compScore: ', app.compScore);
     console.log('userScore: ', app.userScore);
     $('#user_score').html(app.userScore.toString());
-    $('#outcome').html("".concat(compChoice, " you win!"));
+    $('#outcome').html("You win!");
   } else {
     console.log('draw');
     app.draws++;
     console.log('draws: ', app.draws);
     $('#draws').html(app.draws.toString());
-    $('#outcome').html("".concat(compChoice, " it's a draw!"));
+    $('#outcome').html("It's a draw!");
   }
 
   app.gamesPlayed++;
