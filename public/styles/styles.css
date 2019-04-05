@@ -177,7 +177,7 @@ input {
 
 /**** Base Styles ****/
 html {
-  font-size: 52.5%; }
+  font-size: 62.5%; }
 
 body {
   text-align: center;
@@ -185,9 +185,9 @@ body {
 
 h1 {
   font-family: 'Major Mono Display', monospace;
-  font-size: 5rem;
+  font-size: 3.5rem;
   text-transform: capitalize;
-  margin-bottom: 40px; }
+  margin-bottom: 30px; }
 
 h2 {
   border-bottom: 2px solid #985e6d;
@@ -195,7 +195,7 @@ h2 {
 
 h2,
 button {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'Roboto Mono', monospace; }
 
 button {
@@ -203,7 +203,7 @@ button {
 
 .drake {
   width: 80%;
-  margin: 40px auto 0;
+  margin: 30px auto 0;
   max-width: 1200px; }
 
 .img_wrap {
@@ -238,8 +238,6 @@ button {
   border-radius: 3px; }
 
 @media (min-width: 480px) {
-  html {
-    font-size: 62.5%; }
   .img_container {
     width: 35%; } }
 
@@ -259,13 +257,13 @@ button {
     width: 30%; }
   h2 {
     width: 70%;
-    margin: 0 auto; }
-  .drake {
-    margin-top: 60px; } }
+    margin: 0 auto; } }
 
 @media (min-width: 992px) {
+  html {
+    font-size: 93.7%; }
   .drake {
-    margin-top: 80px; } }
+    margin-top: 50px; } }
 
 @media (min-width: 1400px) {
   h2 {
@@ -273,7 +271,6 @@ button {
   .img_container {
     width: 25%; } }
 
-/**** 0px until overridden ****/
 .modal {
   position: fixed;
   top: 0;
@@ -306,8 +303,6 @@ button {
 @media (min-width: 600px) {
   .modal .img_container {
     width: 30%; }
-  .modal .drake {
-    margin-top: 60px; }
   .score {
     width: 80%;
     margin: 0 auto 40px; }
@@ -315,10 +310,17 @@ button {
     margin-top: 80px; } }
 
 @media (min-width: 992px) {
+  .modal h1 {
+    font-size: 3rem; }
+  .modal h2,
+  .modal button {
+    font-size: 2rem; }
   .modal .img_container {
-    width: 30%; }
+    width: 25%; }
+  .modal .drake {
+    margin-top: 30px; }
   .score {
-    width: 60%; } }
+    width: 80%; } }
 
 @media (min-width: 1400px) {
   .modal .img_container {
